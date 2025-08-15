@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,210 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(0deg, #0E1647 0%, #0A1033 100%);
+  /* height: 100vh; */
+  min-height: 100vh;
+  padding-top: 64px;
+  padding-bottom: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 100px;
+  }
+}
+
+@font-face {
+  font-family: 'lahzeh';
+  src: url('/src/assets/fonts/Lahzeh.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: lahzeh;
+}
+
+.linear {
+  background: linear-gradient(to top, #243189 0%, #1B2565 100%);
+}
+
+.linearx {
+  background: linear-gradient(to top, #243189 0%, #1B2565 100%);
+}
+
+.background-none {
+  background: none;
+}
+
+.linear-1 {
+  background: linear-gradient(to right, #1D2766 0%, #171F52 100%);
+}
+
+.linear-button {
+  background: linear-gradient(to right, #369DE4 0%, #045CB9 100%);
+}
+
+.linear-footer {
+  background: linear-gradient(to right, #1D2766 0%, #171F52 100%);
+}
+
+@media (max-width: 768px) {
+  .linear {
+    background: transparent !important;
+  }
+
+  ;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+  color: white;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linear-s {
+  background: linear-gradient(to top, #243189 0%, #1B2565 100%);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html,
+
+.load {
+  margin: 0;
+  padding: 0;
+  font-family: ‘Arial Narrow’, sans-serif;
+  font-weight: 100;
+  font-size: 1.1em;
+  color: #a3e1f0;
+}
+
+
+.let1 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.2s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let2 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.3s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let3 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.4s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let4 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.5s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+
+}
+
+.let5 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.6s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let6 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.7s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let7 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.8s;
+  position: relative;
+  top: 0.63em;
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+@keyframes drop {
+  10% {
+    opacity: 0.5;
+  }
+
+  20% {
+    opacity: 1;
+    top: 3.78em;
+    transform: rotateX(-360deg);
+  }
+
+  80% {
+    opacity: 1;
+    top: 3.78em;
+    transform: rotateX(-360deg);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    top: 6.94em
+  }
 }
