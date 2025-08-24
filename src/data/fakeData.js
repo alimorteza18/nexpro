@@ -1,9 +1,9 @@
 export const menuItems = [
-  { icon: "home", label: "صفحه اصلی" },
-  { icon: "medal", label: "برترین گیمر ها" },
-  { icon: "info", label: "درباره ما" },
-  { icon: "support", label: "پشتیبانی" },
-  { icon: "news", label: "بلاگ" },
+  { icon: "home", label: "صفحه اصلی", link : "/" },
+  { icon: "medal", label: "برترین گیمر ها", link : "/"  },
+  { icon: "info", label: "درباره ما", link : "/about-us"  },
+  { icon: "support", label: "پشتیبانی", link : "/support"  },
+  { icon: "news", label: "بلاگ", link : "/blog"  },
 ];
 
 export const games = [

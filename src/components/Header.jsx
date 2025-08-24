@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { menuItems } from "../data/fakeData";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,13 +30,14 @@ const Header = () => {
             {/* Menü */}
             <nav className="flex items-center space-x-reverse space-x-6 text-xs">
               {menuItems.map((item, index) => (
-                <div
+                <Link
+                  to={item.link}
                   key={index}
                   className="flex items-center space-x-reverse space-x-2 cursor-pointer whitespace-nowrap hover:text-gray-300 transition"
                 >
                   <img src={`./icons/${item.icon}.svg`} alt={item.label} className="w-4 h-4" />
                   <p>{item.label}</p>
-                </div>
+                </Link>
               ))}
             </nav>
 
@@ -48,6 +50,9 @@ const Header = () => {
               <div className="px-[12px] cursor-pointer flex justify-center rounded-lg items-center border-[#DDE3F0] border">
                 <img src="./icons/user.svg" alt="آیکون حساب" className="w-[16px] h-[16px]" />
               </div>
+              <Link to="/notification">
+                <img src="/icons/notify.svg" alt="" />
+              </Link>
             </div>
           </div>
 
@@ -59,7 +64,9 @@ const Header = () => {
               className="cursor-pointer"
               onClick={() => setMenuOpen(true)}
             />
-            <img src="/icons/notify.svg" alt="" />
+            <Link to="/notification">
+              <img src="/icons/notify.svg" alt="" />
+            </Link>
           </div>
         </div>
       </header>
@@ -70,7 +77,7 @@ const Header = () => {
           {/* Menü kutusu */}
           <div
             className={`bg-[#0A1C3D]/80 backdrop-blur-[5px] text-white overflow-hidden transition-all duration-300 ease-out ${animateOut ? "animate-slide-up-menu" : "animate-slide-down-menu"}`}
-            style={{ height: `${menuItems.length * 56 + 74}px` }}
+            style={{ height: `${menuItems.length * 56 + 132}px` }}
           >
             <div className="flex flex-row-reverse justify-between items-center px-6 py-4 border-b border-[#ffffff1a]">
               <img src="/nexpro-logo.svg" alt="لوگو" className="w-32 h-auto" />
@@ -88,9 +95,11 @@ const Header = () => {
               </div>
               <div className="w-full flex flex-col">
                 {menuItems.map((item, index) => (
-                  <div
+                  <Link
+                    to={item.link}
                     key={index}
                     className="flex items-center justify-between px-6 h-[56px] w-full border-b  border-[#ffffff1a]"
+                    onClick={handleClose}
                   >
                     <p>{item.label}</p>
                     <img
@@ -98,7 +107,7 @@ const Header = () => {
                       alt={item.label}
                       className="w-5 h-5"
                     />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

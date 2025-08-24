@@ -16,13 +16,13 @@ const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Loader = () => (
     <div className="flex w-full items-center justify-center min-h-screen">
         <h1 className="load">
-            <span class="let1">l</span>
-            <span class="let2">o</span>
-            <span class="let3">a</span>
-            <span class="let4">d</span>
-            <span class="let5">i</span>
-            <span class="let6">n</span>
             <span class="let7">g</span>
+            <span class="let6">n</span>
+            <span class="let5">i</span>
+            <span class="let4">d</span>
+            <span class="let3">a</span>
+            <span class="let2">o</span>
+            <span class="let1">l</span>
         </h1>
     </div>
 );

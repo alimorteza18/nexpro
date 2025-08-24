@@ -34,8 +34,8 @@ const Game = () => {
                                 </div>
                             </div>
                         </div>
-                        <img src="/pubg-1.svg" className="mt-4 w-full hidden md:block" alt="" />
-                        <img src="/pubg-1-mobile.svg" className="mt-4 w-full block md:hidden" alt="" />
+                        <img src="/pubg-1.png" className="mt-4 w-full hidden md:block" alt="" />
+                        <img src="/pubg-1-mobile.png" className="mt-4 w-full block md:hidden" alt="" />
                     </div>
                     <div className="flex flex-col md:w-[342px] w-full">
                         <div className="flex justify-between w-full text-xs">
